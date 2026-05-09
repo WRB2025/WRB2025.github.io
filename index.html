@@ -82,12 +82,18 @@
 
     .project button {
       margin-top: 10px;
+      margin-right: 5px;
       padding: 8px 12px;
       border: none;
       border-radius: 5px;
       background: var(--accent);
       color: black;
       cursor: pointer;
+      font-weight: bold;
+    }
+
+    .project button:hover {
+      opacity: 0.9;
     }
 
     footer {
@@ -101,6 +107,7 @@
 
   <header>
     <h1>Hi, My Name is Walker</h1>
+
     <p>
       I'm a high school web developer who loves building websites
       with HTML, CSS, and JavaScript.
@@ -109,67 +116,92 @@
 
   <section>
     <h2>Skills</h2>
+
     <div class="skills">
       <div class="skill">HTML</div>
       <div class="skill">CSS</div>
       <div class="skill">JavaScript</div>
       <div class="skill">Git & GitHub</div>
       <div class="skill">Responsive Design</div>
+      <div class="skill">Java</div>
+      <div class="skill">Spring Boot</div>
     </div>
   </section>
 
   <section>
     <h2>Projects</h2>
+
     <div class="projects">
+
       <div class="project">
         <h3>Calculator App</h3>
+
         <p>A simple calculator made with JavaScript.</p>
-        <button onclick="openProject('https://github.com/yourusername/calculator')">
-          View Project
+
+        <button onclick="openProject('https://github.com/WRB2025/calculator')">
+          View Repository
+        </button>
+
+        <button onclick="openProject('https://WRB2025.github.io/calculator/')">
+          Live Demo
         </button>
       </div>
 
       <div class="project">
         <h3>To-Do List</h3>
+
         <p>A to-do list with local storage.</p>
-        <button onclick="openProject('https://github.com/yourusername/todo')">
-          View Project
+
+        <button onclick="openProject('https://github.com/WRB2025/todo')">
+          View Repository
+        </button>
+
+        <button onclick="openProject('https://WRB2025.github.io/todo/')">
+          Live Demo
         </button>
       </div>
 
       <div class="project">
-  <h3>Animal App</h3>
+        <h3>Animal App</h3>
 
-  <p>
-    A Java Spring Boot application for managing animals using
-    CRUD operations and a database backend.
-  </p>
+        <p>
+          A Java Spring Boot application for managing animals
+          using CRUD operations and a database backend.
+        </p>
 
-  <button onclick="openProject('https://github.com/WRB2025/animal')">
-    View Repository
-  </button>
+        <button onclick="openProject('https://github.com/WRB2025/animal')">
+          View Repository
+        </button>
 
-  <button onclick="openProject('https://WRB2025.github.io/animal/')">
-    Live Demo
-  </button>
-</div>
+        <button onclick="openProject('https://WRB2025.github.io/animal/')">
+          Live Demo
+        </button>
+      </div>
 
       <div class="project">
         <h3>Game</h3>
+
         <p>A small browser game built in JavaScript.</p>
-        <button onclick="openProject('https://github.com/yourusername/game')">
-          View Project
+
+        <button onclick="openProject('https://github.com/WRB2025/game')">
+          View Repository
+        </button>
+
+        <button onclick="openProject('https://WRB2025.github.io/game/')">
+          Live Demo
         </button>
       </div>
+
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> [Your Name] • Built with HTML & JavaScript
+    © <span id="year"></span> Walker • Built with HTML & JavaScript
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
     function openProject(url) {
       window.open(url, "_blank");
